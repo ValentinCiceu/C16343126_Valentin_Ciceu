@@ -1,15 +1,15 @@
 //Lab test by Valentin Ciceu 2017 C16343126
 
-Stars[] stars = new Stars[400];
+Stars[] stars = new Stars[400]; //i want 400 stars when it goe night
 void setup() {
 
   size(500, 500);
-  for (int i=0; i<stars.length; i++) {
+  for (int i=0; i<stars.length; i++) { //Array for the stars
     stars[i]=new Stars(); //the array of the stars to get the 200 called at once
   }
   //gameObject.add(new Sun());
   //gameObject.add(new Sun());
-  sun=new Sun();
+  sun=new Sun(); 
   gameObject.add(sun);
   for (int i = 0; i<6; i++) {
     gameObject.add(new Cloud());
@@ -36,8 +36,8 @@ float sTimer=1.5;
 void draw() {
   background(0);
   noStroke();
-  println(sun.pos.y);
-
+ // println(sun.pos.y);
+//this is for the sunset
   if (sun.pos.y>0) {
     fill(light); // the top half colour. Will make it go black at sunset.
   }
@@ -62,6 +62,7 @@ void draw() {
   noStroke();
   rect(0, 250, width, height);
 
+//this is for the array list
   for (int i = 0; i< gameObject.size(); i++) {
 
     GameObject go = gameObject.get(i);
