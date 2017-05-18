@@ -65,4 +65,20 @@ if(resetTimer>100){
 }
   
 }
+if(mouseY>250){ //bottom half spawn
+ if(press){
+   gameObject.add(new Tree()); 
+   timer+=timerSpeed;
+ }
+ if(timer>0){
+   stop=false;
+   press=false;
+   resetTimer+=resetSpeed;
+ }
+if(resetTimer>100){
+  stop=true;
+  timer=0;
+}
+  
+}
 }
