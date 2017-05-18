@@ -36,15 +36,15 @@ class Tree extends GameObject{
   
   void render(){
     stroke(0);
-    fill(r,g,b);
+
+    
+    line(pos.x,pos.y,pos.x,otherPos.y);
+        fill(r,g,b);
     ellipse(pos.x-0,pos.y+-22,20,20);
     ellipse(pos.x+20,pos.y+-25,20,20);
     ellipse(pos.x-0,pos.y+-3,20,20);
     ellipse(pos.x-20,pos.y+-24,21,20);
     ellipse(pos.x-1,pos.y+-42,21,20);
-    
-    line(pos.x,pos.y,pos.x,otherPos.y);
-    
     //for(int i = 0 ; i< 12; i++){ do later for jazz
     //  float pettleX=pos.x+sin(theta)*100;
     //  float pettleY=pos.y-cos(theta)*100;
